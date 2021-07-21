@@ -29,18 +29,19 @@ textarea {
 }
 
 .textbox {
-  width: 55rem;
-  height: 2.5rem;
+  width: 60rem;
+  height: 2.35rem;
   background: rgb(255,255,255, 0.35);
   border-radius: .5rem;
-  text-align: center;
   border: none;
+  padding-left: 1rem;
+  display: flex;
+  align-self: center;
 }
 
 .jumbotron {
   text-align: center;
   background-color: transparent;
-  color: black;
   border-radius: 0;
   margin-bottom: 0px;
 }
@@ -51,18 +52,15 @@ textarea {
 }
 
 .past {
-  background-color: rgb(255,255,255, 0.35);
-  color: black;
+  background-color: rgb(255,255,255, 0.0);
 }
 
 .present {
   background-color: rgb(181,88,110);
-  color: black;
 }
 
 .future {
   background-color: rgb(85,46,109);
-  color: black;
 }
 
 .saveBtn {
@@ -72,10 +70,10 @@ textarea {
   background: rgb(255,255,255, 0.35);
 }
 
-.saveBtn i:hover {
+.btnContainer:hover {
   cursor: pointer;
   transition: transform 150ms;
-  transform: scale(1.35);
+  transform: scale(1.15);
 }
 
 .time {
@@ -86,6 +84,7 @@ textarea {
   line-height: 1;
   text-align: left;
   color: white;
+  padding: 2px 3px 2px 3px;
 }
 
 .fas { 
@@ -101,10 +100,19 @@ textarea {
   display: flex;
   justify-content: space-evenly;
   align-content: center;
+  padding: 10px 10px 10px 10px;
+  width: 70rem;
 }
 
 .time {
   text-align: left;
+}
+
+/* changed iput text font */
+input[type="text"]{
+  font-family: quicksand, sans-serif;
+  color: white;
+  font-size: 20px;
 }
 
 /* responsive screen sizing */
