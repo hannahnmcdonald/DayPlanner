@@ -80,3 +80,17 @@ textarea {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }
+
+.time {
+  font-family: la-bohemienne, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+  line-height: 1;
+  text-align: left;
+}
+
+.fas { 
+  padding: 15px 15px 15px 15px;
+  text-align: right;
+}
