@@ -1,32 +1,39 @@
+body {
+  background-image: url("https://www.sliit.lk/wp-content/uploads/2018/02/minimalizm-gradient-background.jpg");
+}
 
 .display-3 {
-  font-family: la-bohemienne, sans-serif;
+  font-family: bounce-script, sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 100px;
-  line-height: 1;
+  color: white;
+  margin-top: 0px;
 }
 
 p {
-  font-family: raleway, sans-serif;
+  font-family: quicksand, sans-serif;
   font-weight: 400;
-  font-size: 20px;
   font-style: normal;
+  font-size: 20px;
   margin-top: 20px;
+  color: white;
 }
 
 textarea {
   background: transparent;
   border: none;
   resize: none;
-  color: #000000;
-  border-left: 1px solid black;
-  padding: 10px;
+  padding: 0px;
+  margin: 0px;
 }
 
 .textbox {
   width: 55rem;
-  height: 3.25rem;
+  height: 2.5rem;
+  background: rgb(255,255,255, 0.35);
+  border-radius: .5rem;
+  text-align: center;
 }
 
 .jumbotron {
@@ -34,11 +41,7 @@ textarea {
   background-color: transparent;
   color: black;
   border-radius: 0;
-  border-bottom: 10px solid black;
-}
-
-.description {
-  white-space: pre-wrap;
+  margin-bottom: 0px;
 }
 
 .time-block {
@@ -46,38 +49,27 @@ textarea {
   border-radius: 15px;
 }
 
-.row {
-  white-space: pre-wrap;
-  height: 80px;
-  border-top: 1px solid white;
-}
-
-.hour {
-  background-color: #ffffff;
-  color: #000000;
-  border-top: 1px dashed #000000;
-}
-
 .past {
   background-color: #d3d3d3;
-  color: white;
+  color: black;
 }
 
 .present {
-  background-color: #ff6961;
-  color: white;
+  background-color: #73b6c0;
+  color: black;
 }
 
 .future {
-  background-color: #77dd77;
-  color: white;
+  background-color: #7ab49f;
+  color: black;
 }
 
 .saveBtn {
   background-color: #e7e7e7;
-  border-radius: .75rem;
+  border-radius: .5rem;
   border-width: 1px;
   color: rgb(12, 12, 12);
+  background: rgb(255,255,255, 0.35);
 }
 
 .saveBtn i:hover {
@@ -87,15 +79,38 @@ textarea {
 }
 
 .time {
-  font-family: la-bohemienne, sans-serif;
+  font-family: bounce-script, sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 40px;
   line-height: 1;
   text-align: left;
+  color: white;
 }
 
 .fas { 
-  padding: 15px 15px 15px 15px;
+  padding: 10px;
   text-align: right;
+  color: white;
+}
+
+.timeContainer {
+  background: rgb(255,255,255, 0.35);
+  border-radius: 1rem;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+}
+
+.time {
+  text-align: left;
+}
+
+/* responsive screen sizing */
+@media only screen and (max-width: 768px) {
+  .textbox {
+  width: 100%;
+  height: 100%;
+  }
 }
