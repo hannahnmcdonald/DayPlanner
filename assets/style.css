@@ -1,5 +1,5 @@
 
-h1 {
+.display-3 {
   font-family: la-bohemienne, sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -22,6 +22,11 @@ textarea {
   color: #000000;
   border-left: 1px solid black;
   padding: 10px;
+}
+
+.textbox {
+  width: 55rem;
+  height: 5rem;
 }
 
 .jumbotron {
@@ -69,16 +74,19 @@ textarea {
 }
 
 .saveBtn {
-  border-left: 1px solid black;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background-color: #06aed5;
-  color: white;
+  background-color: #bebebe;
+  border-radius: .75rem;
+  border-width: 1px;
+  height: 5rem;
+  width: 5rem;
+  color: rgb(12, 12, 12);
 }
 
 .saveBtn i:hover {
   font-size: 20px;
-  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  transition: transform 150ms;
+  transform: scale(1.03);
 }
 
 .time {
