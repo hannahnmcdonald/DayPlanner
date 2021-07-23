@@ -93,7 +93,7 @@ textarea {
   color: white;
 }
 
-.timeContainer {
+.row {
   background: rgb(255,255,255, 0.35);
   border-radius: 1rem;
   margin-bottom: 10px;
@@ -110,6 +110,12 @@ textarea {
 
 /* changed iput text font */
 input[type="text"]{
+  font-family: quicksand, sans-serif;
+  color: white;
+  font-size: 20px;
+}
+
+.mbar {
   font-family: quicksand, sans-serif;
   color: white;
   font-size: 20px;
