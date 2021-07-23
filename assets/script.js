@@ -1,5 +1,4 @@
 // Declare Variables:-----------------------------------------------------------//
-var saveBtn = document.getElementsByClassName('saveBtn');
 var btnContainer = document.getElementsByClassName('btnContainer');
 var time = document.getElementsByClassName('time');
 
@@ -17,13 +16,14 @@ $(document).ready(function(){
 
 
 // Moment.js  to highlight past/present/future timeContainers------------------//
+
 const rows = document.getElementsByClassName("row");
 let currentHour = parseInt(moment().format('HH'));
 
 Array.from(rows).forEach(row => {
   let
-    rowIdString = row.id,
-    rowHour;
+    rowIdString = row.id,rowHour;
+    // TEST: console.log(rowIdString);
   if (rowIdString) {
     rowHour = parseInt(rowIdString);
   }
@@ -34,7 +34,7 @@ Array.from(rows).forEach(row => {
     } else if (currentHour < rowHour) {
       setColor(row, "rgb(255,255,255,0.45");
     } else if (currentHour > rowHour) {
-      setColor(row, "rgb(85,46,109, 0.45)");
+      setColor(row, "rgb(85,46,109, 0.35)");
     }
   }
 });
@@ -43,6 +43,21 @@ function setColor(element, color) {
   element.style.backgroundColor = color;
 };
 
-// // Add input to local storage--------------------------------------------------//
+// Add input to local storage--------------------------------------------------//
 
+const button = document.querySelector('.saveBtn');
+const input = document.getElementById('input');
+
+button.addEventListener('click', savePlan);
+
+function savePlan() {
+  localStorage.setItem('plan', input.value);
+  getPlan();
+};
+
+function getPlan() {
+  return localStorage.getItem('plan');
+};
+
+getPlan();
 
