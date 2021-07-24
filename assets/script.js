@@ -1,8 +1,4 @@
-// Declare Variables:-----------------------------------------------------------//
-var btnContainer = document.getElementsByClassName('btnContainer');
-var time = document.getElementsByClassName('time');
-
-// Below is moment.js to auto-update time on webpage----------//
+// Moment.js to auto-update time on webpage----------//
 var update = function () {
     date = moment(new Date())
     currentDay.html(date.format('dddd, MMMM Do YYYY, HH:mm:ss a'));
@@ -46,18 +42,20 @@ function setColor(element, color) {
 // Add input to local storage--------------------------------------------------//
 
 const button = document.querySelector('.saveBtn');
-const input = document.getElementById('input');
+const input = document.getElementById('h17input', 'h16input','h15input','h14input','h13input','h12input','h11input','h10input','h9input');
 
-button.addEventListener('click', savePlan);
+button.addEventListener('click', savePlan());
 
 function savePlan() {
   localStorage.setItem('plan', input.value);
-  getPlan();
-};
+}
 
 function getPlan() {
   return localStorage.getItem('plan');
-};
+}
 
 getPlan();
 
+// Test:
+// console.log(h16input.value);
+// console.log(h12input.value);
