@@ -28,7 +28,7 @@ textarea {
   margin: 0px;
 }
 
-.textbox {
+.hourinput {
   width: 60rem;
   height: 2.35rem;
   background: rgb(255,255,255, 0.35);
@@ -108,20 +108,34 @@ textarea {
   text-align: left;
 }
 
-/* changed iput text font */
+.submitBtn {
+  background-color: #e7e7e7;
+  border-radius: .5rem;
+  border: none;;
+  background: rgb(255,255,255, 0.35);
+  font-family: bounce-script, sans-serif;
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  width: 6.5rem;
+  height: 3.5rem;
+  display: flex;
+  justify-self: center;
+  margin-left: 45%;
+}
+
+.submitBtn:hover {
+  cursor: pointer;
+  transition: transform 150ms;
+  transform: scale(1.10);
+}
+
+/* changed imput text font */
 input[type="text"]{
   font-family: quicksand, sans-serif;
   color: white;
   font-size: 20px;
-}
-
-.message {
-  font-family: quicksand, sans-serif;
-  color: white;
-  font-size: 20px;
-  display: none
-}
-
+} 
 
 /* responsive screen sizing */
 @media only screen and (max-width: 768px) {

@@ -42,31 +42,31 @@ function setColor(element, color) {
 
 // Add input to local storage-------------------------------------------------------//
 
-const button = document.querySelector('.saveBtn');
-const hours = ['9', '10' , '11', '12' , '13', '14', '15', '16', '17'];
-let input = document.getElementById('input');
-
-
-function savePlan() {
-
-    for (let i = 0; i < hours.length; i++) {
-        console.log(hours[i]);
-        // console.log(input);
-    };
-    localStorage.setItem('plan', JSON.stringify(hours));
-    // console.log(plan);
-    
+const handleSaveHour = (hour) => {
+    const val = document.getElementById('hour').value;
+    localStorage.setItem(`hour:${hour}`, val);
 };
 
-button.addEventListener('click', function(e) {
-    e.preventDefault();
-    savePlan()
+const handleSavePlan = () => {
+    const inputs = Array.from(document.getElementsByClassName('hourinput'));
+    const plan = inputs.map((input) => input.value);
+    localStorage.setItem('plan', JSON.stringify(plan));
+}
 
+window.addEventListener('load', () => {
+    const inputs = document.getElementsByClassName('hourinput');
+    const planStr = localStorage.getItem('plan');
+    const plan = JSON.parse(planStr);
+
+    // TEST:console.log(plan);
+
+    if (plan) {
+        for (let i = 0; i < inputs.length; i++) {
+            inputs[i].value = plan[i];
+        }
+    } else {
+        for (let i = 0; i < inputs.length; i++) {
+            inputs[i].value = localStorage.getItem(`hour:${inputs[i].id}`);
+        }
+    }
 });
-
-// Retrieves plan from local Storage-----------------------------------------------//
-function getPlan() {
-    return localStorage.getItem(JSON.parse('plans'));
-};
-
-getPlan();
