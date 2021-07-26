@@ -10,7 +10,6 @@ $(document).ready(function(){
     setInterval(update, 1000);
 });
 
-
 // Moment.js  to highlight past/present/future timeContainers----------------------//
 
 const rows = document.getElementsByClassName("row");
@@ -42,12 +41,12 @@ function setColor(element, color) {
 
 // Add input to local storage-------------------------------------------------------//
 
-const handleSaveHour = (hour) => {
-    const val = document.getElementById('hour').value;
+const saveHour = (hour) => {
+    const val = document.querySelector('[id="' + hour + '"] .hourinput').value;
     localStorage.setItem(`hour:${hour}`, val);
 };
 
-const handleSavePlan = () => {
+const savePlan = () => {
     const inputs = Array.from(document.getElementsByClassName('hourinput'));
     const plan = inputs.map((input) => input.value);
     localStorage.setItem('plan', JSON.stringify(plan));
