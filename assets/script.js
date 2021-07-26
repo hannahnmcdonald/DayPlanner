@@ -39,33 +39,26 @@ function setColor(element, color) {
   element.style.backgroundColor = color;
 };
 
-// Add input to local storage-------------------------------------------------------//
+// Add input text to local storage---------------------------------------------------//
 
-const saveHour = (hour) => {
-    const val = document.querySelector('[id="' + hour + '"] .hourinput').value;
-    localStorage.setItem(`hour:${hour}`, val);
-};
+$(".saveBtn").on("click", function () {
+  const row = $(this).closest(".row") // see https://api.jquery.com/closest/
 
-const savePlan = () => {
-    const inputs = Array.from(document.getElementsByClassName('hourinput'));
-    const plan = inputs.map((input) => input.value);
-    localStorage.setItem('plan', JSON.stringify(plan));
-}
+  // Get the values
+  const hourinput = row.find(".hourinput").val();
+  const hour = row.attr('id');
 
-window.addEventListener('load', () => {
-    const inputs = document.getElementsByClassName('hourinput');
-    const planStr = localStorage.getItem('plan');
-    const plan = JSON.parse(planStr);
-
-    // TEST:console.log(plan);
-
-    if (plan) {
-        for (let i = 0; i < inputs.length; i++) {
-            inputs[i].value = plan[i];
-        }
-    } else {
-        for (let i = 0; i < inputs.length; i++) {
-            inputs[i].value = localStorage.getItem(`hour:${inputs[i].id}`);
-        }
-    }
+  // Save data in local storage
+  localStorage.setItem(hour, hourinput);
 });
+
+// Retrieve from Local Storage:------------------------------------------------------//
+  $('#9 .hourinput').val(localStorage.getItem('9'));
+  $('#10 .hourinput').val(localStorage.getItem('10'));
+  $('#11 .hourinput').val(localStorage.getItem('11'));
+  $('#12 .hourinput').val(localStorage.getItem('12'));
+  $('#13 .hourinput').val(localStorage.getItem('13'));
+  $('#14 .hourinput').val(localStorage.getItem('14'));
+  $('#15 .hourinput').val(localStorage.getItem('15'));
+  $('#16 .hourinput').val(localStorage.getItem('16'));
+  $('#17 .hourinput').val(localStorage.getItem('17'));
