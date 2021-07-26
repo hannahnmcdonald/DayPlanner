@@ -22,7 +22,7 @@ This application uses moment.js for a simple clock on the top of the page and ha
 
 <ins>Additional Credits:</ins> LOTS of coffee
 
-<ins> Resources: </ins> Very many notable resources for this project especially from MDN articles. This project really took me a long time and was such a learning process and I felt it helped me understand Javascript/JQuery better. 
+<ins> Resources: </ins> Very many notable resources for this project especially from MDN amd JQuery articles.
 
 **The following sources were very helpful to me in the process of coding this:**
 
