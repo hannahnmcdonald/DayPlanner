@@ -10,7 +10,7 @@ $(document).ready(function(){
     setInterval(update, 1000);
 });
 
-// Moment.js  to highlight past/present/future timeContainers----------------------//
+// Moment.js  to highlight past/present/future rows----------------------//
 
 const rows = document.getElementsByClassName("row");
 let currentHour = parseInt(moment().format('HH'));
